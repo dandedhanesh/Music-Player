@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhanesh-Your favorite music player</title>
+    <link rel="stylesheet" href="spotify.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+            
+    <nav>
+        <ul class="divi">
+            <li class="brand" onclick="home()"><img src="UIpics/icon.png" alt="Spotify"> <b >Dhanesh</b></li>
+            <li class="brand1" onclick="home()">Home</li>
+            <li class="brand2" onclick="about()">About</li>
+            <p id="lgn">Login/Signup</p>
+            
+        </ul>
+      
+    </nav>
+    <div class="container">
+    <div class="songs">
+       <div class="s1"> <img alt = "1"><span id="ss">  <span class="songName"></span> <span id="ls"><span class="timestamp">3:44 min </span> <span class="spa"><i id="0" class="far songItemPlay fa-play-circle"></i></span></span> </span>  </div>
+       <div class="s1"> <img alt = "1"><span id="ss">  <span class="songName"></span> <span id="ls"><span class="timestamp">3:27 min </span> <span class="spa"><i id="1" class="far songItemPlay fa-play-circle"></i></span></span> </span>  </div>
+       <div class="s1"> <img alt = "1"><span id="ss">  <span class="songName"></span> <span id="ls"><span class="timestamp">4:31 min </span> <span class="spa"><i id="2" class="far songItemPlay fa-play-circle"></i></span></span> </span>  </div>
+       <div class="s1"> <img alt = "1"><span id="ss">  <span class="songName"></span> <span id="ls"><span class="timestamp">3:02 min </span> <span class="spa"><i id="3" class="far songItemPlay fa-play-circle"></i></span></span> </span>  </div>
+       <div class="s1"> <img alt = "1"><span id="ss">  <span class="songName"></span> <span id="ls"><span class="timestamp">3:14 min </span> <span class="spa"><i id="4" class="far songItemPlay fa-play-circle"></i></span></span> </span>  </div>
+       <div class="s1"> <img alt = "1"><span id="ss">  <span class="songName"></span> <span id="ls"><span class="timestamp">3:32 min </span> <span class="spa"><i id="5" class="far songItemPlay fa-play-circle"></i></span></span> </span>  </div>
+       <div class="s1"> <img alt = "1"><span id="ss">  <span class="songName"></span> <span id="ls"><span class="timestamp">4:18 min </span> <span class="spa"><i id="6" class="far songItemPlay fa-play-circle"></i></span></span> </span>  </div>
+       <div class="s1"> <img alt = "1"><span id="ss">  <span class="songName"></span> <span id="ls"><span class="timestamp">5:09 min </span> <span class="spa"><i id="7" class="far songItemPlay fa-play-circle"></i></span></span> </span>  </div>
+       <div class="s1"> <img alt = "1"><span id="ss">  <span class="songName"></span> <span id="ls"><span class="timestamp">3:21 min </span> <span class="spa"><i id="8" class="far songItemPlay fa-play-circle"></i></span></span> </span>  </div>
+       <div class="s1"> <img alt = "1"><span id="ss">  <span class="songName"></span> <span id="ls"><span class="timestamp">4:00 min </span> <span class="spa"><i id="9" class="far songItemPlay fa-play-circle"></i></span></span> </span>  </div>
+       <div class="s1"> <img alt = "1"><span id="ss">  <span class="songName"></span> <span id="ls"><span class="timestamp">1:32 min </span> <span class="spa"><i id="10" class="far songItemPlay fa-play-circle"></i></span></span> </span>  </div>
+       <div class="s1"> <img alt = "1"><span id="ss">  <span class="songName"></span> <span id="ls"><span class="timestamp">3:06 min </span> <span class="spa"><i id="11" class="far songItemPlay fa-play-circle"></i></span></span> </span>  </div>
+       <div class="s1"> <img alt = "1"><span id="ss">  <span class="songName"></span> <span id="ls"><span class="timestamp">3:06 min </span> <span class="spa"><i id="12" class="far songItemPlay fa-play-circle"></i></span></span> </span>  </div>
+       <div class="s1"> <img alt = "1"><span id="ss">  <span class="songName"></span> <span id="ls"><span class="timestamp">3:06 min </span> <span class="spa"><i id="13" class="far songItemPlay fa-play-circle"></i></span></span> </span>  </div>
+    </div>
+    
+    </div>
+
+
+<!-- 
+    <p id="name1" align="middle">Song name</p>   -->
+
+
+
+
+<div class="bottom">
+    
+        <input value="0" type="range" name="range" id="myProgressBar">
+         
+   
+    <div class="icons">  
+        <i id = "timeline"></i> 
+        <i id="sh" class="fas fa-2x fa-random"></i>
+        <i id="backward" class="fas fa-2x fa-backward"></i>
+        <i id="play" class="far fa-2x fa-play-circle"></i>
+        <i id="forward" class="fas fa-2x fa-forward"></i>
+        <i id="re" class="fas fa-2x fa-undo-alt"></i>
+        <i id = "timedur"></i> 
+        <i>
+            <input type="range" id="volume" name="volume"
+         min="0" max="100" value="90" onchange="volume_change()"> 
+              <label id="volume1">90</label>
+        </i>
+        
+    </div>
+  
+
+    
+
+    <div class="sound">
+        <img id="fig" width="50px" height="55px"  src="sound.gif" alt="This is a gif"><p id="name">Song name</p>
+    </div>
+    
+    
+</div>
+
+<div class="copyr">
+    <ul>
+        <li id="ncsi"><img src="UIpics/ncs.jpg" alt="NCS"></li>
+        <li><h1 id="copyri">Best of NCS - No copyright Sounds</h1>
+        </li>
+    </ul>
+</div>
+
+<!-- <audio controls style="position: absolute; width: 100%;">
+    <source src="Srivalli.mp3" type="audio/mpeg">
+  </audio> -->
+  <script src="https://kit.fontawesome.com/bd98da22e5.js" crossorigin="anonymous"></script>
+
+
+  
+
+</body>
+<script src="Spotify.js"></script>  
+</html>
+

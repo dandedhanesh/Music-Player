@@ -1,0 +1,1 @@
+let audio = new Audio("songs/1.mp3");

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+  <div>
+    <h1>SignUp</h1>
+    <input type="text" placeholder="username" id="username" required>
+    <input type="text" placeholder="email" id="email" required>
+    <input type="type" placeholder="password" id="password" required>
+    <button type="submit" id="submit" style="cursor: pointer;">SignUp</button> 
+    </div>
+   
+<!-- <script src="lgtest.js"></script> -->
+</body>
+
+</html>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+    import {  getDatabase, ref, set  } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+    import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDgGPUX2UygSrLsscbpycf82zGy5S3d0O8",
+      authDomain: "music-b9fe1.firebaseapp.com",
+      projectId: "music-b9fe1",
+      storageBucket: "music-b9fe1.appspot.com",
+      messagingSenderId: "860404349279",
+      appId: "1:860404349279:web:68df231f8c9b2c50891eea"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase();
+    const auth = getAuth(app);
+    submit.addEventListener('click',(e)=>{
+     
+//   set(ref(database, 'users/'+username.value), {
+//     username:username.value,
+//     email:email.value,
+//     password:password.value
+//   }).then(() => {
+//   // Data saved successfully!
+//   alert("Data saved successfully!")
+//   window.location.replace("index.html");
+// })
+// .catch((error) => {
+//   // The write failed...
+//   alert("failed")
+// });
+createUserWithEmailAndPassword(auth, email.value, password.value)
+  .then((userCredential) => { 
+    const user = userCredential.user;
+       alert("SignedUp successfully");
+       window.location.replace("logged.html");
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert("Something went wrong");
+  });
+
+ 
+    })
+
+  </script>
